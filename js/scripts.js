@@ -62,6 +62,7 @@ this.$element = createCard();
     var $card = $('<li>').addClass('card');
     var $cardDescription = $('<p>').addClass('card-description').text(self.description);
     var $cardDelete = $('<button>').addClass('btn-delete').text('x');
+  
 
     $cardDelete.click(function(){
            		self.removeCard();
@@ -71,14 +72,13 @@ this.$element = createCard();
     		.append($cardDescription);
 
     	return $card;
-}
-  
+  }
   Card.prototype = {
 	removeCard: function() {
 		this.$element.remove();
-}
-}
-  
+    }  
+  }
+  }  
   var board = {
     name: 'Kanban Board',
     addColumn: function(column) {
